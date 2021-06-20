@@ -1,3 +1,6 @@
+## tutorial here
+https://medium.com/pinata/how-to-create-layer-2-nfts-with-polygon-and-ipfs-aef998ff8ef2
+
 ## Configuring Metamask
 https://docs.matic.network/docs/develop/metamask/config-matic
 

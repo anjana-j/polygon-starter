@@ -1,12 +1,13 @@
 const hre = require("hardhat");
 require('dotenv').config();
 
+
 async function main() {
     const NFT = await hre.ethers.getContractFactory("RocketNFT");
-    const URI = "https://assets4.lottiefiles.com/packages/lf20_ocrcnofw.json"
+    const URI = "https://assets4.lottiefiles.com/packages/lf20_0ot2smbt.json"
 
     const WALLET_ADDRESS = process.env.ADDRESS
-    const CONTRACT_ADDRESS = "0x25bF53e85d8FfA623403D3f5554F850934C29028"
+    const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS_MOONBASE
 
     const contract = NFT.attach(CONTRACT_ADDRESS);
     await contract.mint(WALLET_ADDRESS, URI);

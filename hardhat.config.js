@@ -4,8 +4,9 @@ require("hardhat-gas-reporter");
 require('dotenv').config();
 
 const PRIVATE_KEY = process.env.PRIVATE_KEY;
-const gasPrice    = 30000000000; // 25 GWEI
-const gasLimit    = 9500000;  
+const PRIVATE_KEY_MOONBASE = process.env.PRIVATE_KEY_MOONBASE;
+const gasPrice    = 25000000000;
+const gasLimit    = 10000000;  
 
 module.exports = {
   defaultNetwork: "matic",
@@ -18,6 +19,11 @@ module.exports = {
       url: "https://rpc-mumbai.maticvigil.com",
       accounts: [PRIVATE_KEY],
       gasPrice: gasPrice
+    },
+    moonbase: {
+      url: "https://rpc.testnet.moonbeam.network",
+      chainId: 1287,
+      accounts: [PRIVATE_KEY_MOONBASE]
     }
   },
   solidity: {
